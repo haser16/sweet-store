@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+
+
+{% block company %}
+    <section class="about_section layout_padding ">
+      <div class="container  ">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>
+                  About Our Company
+                </h2>
+              </div>
+              <p>{{company.second_text}}</p>
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="{{company.image.url}}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+

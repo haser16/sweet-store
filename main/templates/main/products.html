@@ -1,0 +1,41 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block products %}
+    <section class="chocolate_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            Our chocolate products
+          </h2>
+          <p>
+            Many desktop publishing packages and web pagend web page editors now use Lorem Ipsum as their
+          </p>
+        </div>
+      </div>
+          <div class="container">
+            <div class="chocolate_container">
+                {% for product in products %}
+                    <div class="box">
+                        <div class="img-box">
+                          <img src="{{product.image.url}}" alt="">
+                        </div>
+                        <div class="detail-box">
+                          <h6>
+                              {{product.name}} <span>{{product.category}}</span>
+                          </h6>
+                          <h5>
+                            ${{product.price}}
+                          </h5>
+                          <a href="#s">
+                            BUY NOW
+                          </a>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            </div>
+          </div>
+      </div>
+    </section>
+{% endblock %}
